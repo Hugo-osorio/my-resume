@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import { Button } from '@mui/material';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import { theme } from './theme';
+import { ThemeProvider } from '@mui/material/styles';
+import { darkTheme } from './colors';
 
 const App = () => {
   const [ value, setValue ] = useState(false);
@@ -8,7 +12,13 @@ const App = () => {
     setValue(prev => !prev);
   }
 
-  return <div className='flex justify-around mt-[40px]'><Button variant="contained" onClick={handleClick}>Button</Button><div className={`${value ? 'bg-red-200' : 'bg-blue-200'} inline-block p-2`}>Tailwind</div></div>;
+  return <ThemeProvider theme={theme}>
+    
+    <Navbar />
+    <Hero />
+    <div className={`${darkTheme.tertiary} h-[100rem] opacity-100 text-black`}>
+    </div>
+  </ThemeProvider>
 }
 
 export default App;
