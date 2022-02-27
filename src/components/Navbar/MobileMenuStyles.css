@@ -24,3 +24,13 @@
   .elehover {
     opacity: 0;
   }
+
+.text {
+    background: linear-gradient(to bottom, #126E82 0%, #51C4D3 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.4;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: clip;
+}

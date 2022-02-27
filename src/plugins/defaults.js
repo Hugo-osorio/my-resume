@@ -1,7 +1,5 @@
 const darkTheme = require('../colors.json');
 
-console.log(darkTheme)
-
 module.exports = function({addUtilities}) {
     addUtilities({
         'html': {

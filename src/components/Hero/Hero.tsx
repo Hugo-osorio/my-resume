@@ -2,6 +2,7 @@ import React from 'react'
 import Hugo from '../../images/Hugo.jpg';
 import { darkTheme } from '../../colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Canvas from './CanvasTuto';
 
 type HeroProps = {}
 
@@ -13,7 +14,7 @@ const Hero: React.FC<HeroProps> = (props: HeroProps) => {
     //after:absolute after:content-[''] after:h-[2rem] after:w-[2rem] after:bg-red-500 after:bottom-[2px] after:
   return (
     
-    <div className={`overflow-hidden h-screen ${heroColor}`}>
+    <Canvas>
       {/* Mobile Hero*/}
       <div className='flex flex-col items-center justify-around h-[inherit]'>
         <div className='mx-[5rem] my-[2rem]'>
@@ -36,7 +37,7 @@ const Hero: React.FC<HeroProps> = (props: HeroProps) => {
         </div>
       </div>
       {/* Desktop Hero*/}
-    </div>
+    </Canvas>
   )
 }
 
