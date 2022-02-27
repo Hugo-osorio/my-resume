@@ -18,10 +18,10 @@ const MobileNavbarMenu: React.FC<MobileNavbarMenuProps> = ({ showModal, handleCl
     height: '100vh',
     width: '100vw',
     transition: 'all ease-in 0.3s',
-    ...(showModal ? {
+    ...(showModal ? {} : {
       opacity: '0',
       visibility: 'hidden'
-    } : {})
+    })
   };
 
   const ContainerStyles: Record<string, string> = {
@@ -32,12 +32,11 @@ const MobileNavbarMenu: React.FC<MobileNavbarMenuProps> = ({ showModal, handleCl
     left: '0rem',
     top: '0',
     transition: 'all ease-in 0.1s',
-    ...(showModal ? {
+    ...(showModal ? {} : {
       left: '-100%'
-    } : {})
+    })
   };
 
-  console.log(showModal)
   return (
     <>
       <div style={BackgroundStyles}>
